@@ -68,7 +68,6 @@ class Index {
 
 
     modificaPeli(row){
-
         // Afegim les dades de la peli al diàleg modal
         document.getElementById("Titol").value=row.Titol;
         document.getElementById("Any").value=row.Any;
@@ -79,16 +78,13 @@ class Index {
     
         // Enviem l'event click al botó d'obrir el diàleg
         document.getElementById("myModalTrigger").click();
-
     }
 
     deletePeli(row){
         let self=this;
         let peliId=row.targetID;
-        // Afegim l'id de la peli al botó "sí" de confirmar
         let ret=confirm("Desitgeu eliminar la pel·lícula?");
         if(ret) self.removePeliFromBD(peliId);
-
     }
 
     removePeliFromBD(peliId){
