@@ -19,6 +19,11 @@
 -- Table structure for table `Pelis`
 --
 
+drop schema if exists `cine`;
+
+create schema `cine`;
+use `cine`;
+
 DROP TABLE IF EXISTS `Pelis`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
