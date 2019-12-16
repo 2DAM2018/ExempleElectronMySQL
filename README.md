@@ -54,6 +54,40 @@ $ npm install
 
 Amb açò, a més, descarregarem les versions més actualitzades de les dependències cada vegada.
 
+### Actualització de les dependències
+
+Per actualitzar les dependències a les seues versions actuals s'ha utilitzat el paquet `npm-check-updates`. Per a això, primerament l'instal·lem:
+
+```
+sudo npm install -g npm-check-updates
+```
+L'executem des del mateix repositori:
+
+```
+ncu -u
+Upgrading /srv/cvs/ExempleElectronMySQL/package.json
+[====================] 5/5 100%
+
+ @fortawesome/fontawesome-free   ^5.6.1  →  ^5.12.0 
+ bootstrap                       ^4.1.3  →   ^4.4.1 
+ bootstrap.native               ^2.0.24  →  ^2.0.27 
+ electron                       ^3.0.12  →   ^7.1.5 
+ mysql                          ^2.16.0  →  ^2.17.1 
+
+Run npm install to install new versions.
+```
+
+I ja podrem veure com s'ha modificat el fitxer `package.json` amb les dependències actualitzades:
+
+```json
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "bootstrap": "^4.4.1",
+    "bootstrap.native": "^2.0.27",
+    "electron": "^7.1.5",
+    "mysql": "^2.17.1"
+}
+```
 
 ## Desenvolupament de l'aplicació
 
