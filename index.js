@@ -32,9 +32,12 @@ function createWindow() {
   //mainWindow.webContents.openDevTools();
 
   // I per obrir-les en una finestra a banda..
-  devtools = new BrowserWindow()
-  mainWindow.webContents.setDevToolsWebContents(devtools.webContents);
-  mainWindow.webContents.openDevTools({ mode: 'detach' });
+
+  if (process.argv.length===3 && process.argv[2]==="debug"){
+    devtools = new BrowserWindow()
+    mainWindow.webContents.setDevToolsWebContents(devtools.webContents);
+    mainWindow.webContents.openDevTools({ mode: 'detach' });
+  }
 
   /* Gestió d'events de la finestra */
 
