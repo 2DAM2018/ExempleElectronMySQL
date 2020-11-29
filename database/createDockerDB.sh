@@ -28,7 +28,7 @@ if [ $DDB_INSTALLED -ne 1 ]; then
     docker run  --name mysqlCine \
                 -p 3308:3306 \
                 -e MYSQL_ROOT_PASSWORD="root" \
-                -d mysql
+                -d mysql --default-authentication-plugin=mysql_native_password
                 # If we want persistence, just uncomment
                 # -v /srv/mysql:/var/lib/mysql
                 run_mysql_script
